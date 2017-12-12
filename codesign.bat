@@ -14,9 +14,9 @@ IF EXIST "%~dp0signtool.exe" GOTO Sign
 ECHO CodeSign is not initialized ^(SignTool missing^).
 GOTO Done
 :Sign
-REM Open Source Developer, Nico Bendlin <nico@nicode.net> [2016-12-07P1Y]
-"%~dp0signtool.exe" sign /nph /sha1 0FD3BBB70FF1746B6F91ABC81AFA7B3DF30B1155 /fd sha1   /tr http://time.certum.pl /td sha1       /v "%*" && ^
-"%~dp0signtool.exe" sign /nph /sha1 0FD3BBB70FF1746B6F91ABC81AFA7B3DF30B1155 /fd sha256 /tr http://time.certum.pl /td sha256 /as /v "%*"
+REM Open Source Developer, Nico Bendlin <nico@nicode.net> [2017-12-12P1Y]
+"%~dp0signtool.exe" sign /sha1 8BD87C9E9098C0827CE074EBCFC6AA45BA8E11C4 /fd sha1   /tr http://time.certum.pl /td sha1       /v "%*" && ^
+"%~dp0signtool.exe" sign /sha1 8BD87C9E9098C0827CE074EBCFC6AA45BA8E11C4 /fd sha256 /tr http://time.certum.pl /td sha256 /as /v "%*"
 :Done
 ENDLOCAL & EXIT /B %ERRORLEVEL%
 :End
