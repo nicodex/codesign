@@ -1,0 +1,7 @@
+* text=auto
+*.bat text eol=crlf
+*.cer binary
+*.cmd text eol=crlf
+*.p7b binary
+*.pem text eol=lf
+*.txt text eol=crlf
